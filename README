@@ -9,7 +9,29 @@
  to hold whatever PowerShell foo go through my way...
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-[ lib/web ]
+PS1 files can be required/loaded/dotted by
+. <RepoPath>/libs/<ScriptName>.ps1
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+[ libs/compression.ps1 ]
+> UNZIP $zip $unzip_path
+
+[ libs/decorator.ps1 ]
+> BANNER $message
+
+[ libs/filesystem.ps1 ]
+> Make-Dir $path
+> Create-Shortcut $location $link_file_path
+
+[ libs/internet.ps1 ]
 > Download-URL $url $save_as
+
+[ libs/package-manager.ps1 ]
+> EXE-Install $exe_file $install_args
+> MSI-Install $msi_file
+
+[ libs/system.ps1 ]
+> EXE-Cmd $command
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
