@@ -1,27 +1,27 @@
 # Internet
 ###############################################################################
 
-function Download-URL {  
-  param (  
-    [Parameter(Position=0,   
-    Mandatory=$true,   
-    ValueFromPipeline=$true,   
-    HelpMessage="Please type a URL")]  
-    [Alias("url")] [string]  
+function Download-URL {
+  param (
+    [Parameter(Position=0,
+    Mandatory=$true,
+    ValueFromPipeline=$true,
+    HelpMessage="Please type a URL")]
+    [Alias("url")] [string]
     $from_url,
 
-    [Parameter(Position=1,   
-    Mandatory=$true,   
-    ValueFromPipeline=$true,   
-    HelpMessage="Please type a Saving Destination")]  
-    [Alias("file")] [string]  
+    [Parameter(Position=1,
+    Mandatory=$true,
+    ValueFromPipeline=$true,
+    HelpMessage="Please type a Saving Destination")]
+    [Alias("file")] [string]
     $to_file
    )
-  
-   begin {  
+
+   begin {
      echo "Downloading $url"
-   }  
-  
+   }
+
    process {
      $url = New-Object System.Uri($from_url)
      $file = $to_file
