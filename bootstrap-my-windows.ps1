@@ -10,12 +10,14 @@ $home_dir_name = "ABK"
 
 $fullPathIncFileName = $MyInvocation.MyCommand.Definition
 $currentScriptName = $MyInvocation.MyCommand.Name
-$currentExecutingPath = $fullPathIncFileName.Replace($currentScriptName, "")
+$bootstrap_currentExecutingPath = $fullPathIncFileName.Replace($currentScriptName, "")
 
-$shared_libs_dir = "$($currentExecutingPath)\actions\"
-$shared_libs = Get-ChildItem $shared_libs_dir
-foreach ($shared_lib in $shared_libs) {
-  . "$($shared_libs_dir)$($shared_lib)"
+$bootstrap_shared_libs_dir = "$($bootstrap_currentExecutingPath)actions\"
+$bootstrap_shared_libs = Get-ChildItem $bootstrap_shared_libs_dir
+
+foreach ($bootstrap_shared_lib in $bootstrap_shared_libs) {
+  Write-Host "$bootstrap_shared_libs_dir"
+  . "$($bootstrap_shared_libs_dir)$($bootstrap_shared_lib)"
 }
 
 ###############################################################################
@@ -35,6 +37,7 @@ New-Item -name $app_dir_name -type directory -Force
 # Installations
 
 MSysGit $download_dir $home_dir
+SublimeText $download_dir $home_dir $app_dir
 
 ###############################################################################
 #
