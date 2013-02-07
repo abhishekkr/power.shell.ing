@@ -49,12 +49,14 @@ function Create-Shortcut {
     )
 
   process {
-    $WshShell = New-Object -ComObject WScript.Shell
-    $shortcut = $WshShell.CreateShortcut( $link_path )
-    $shortcut.TargetPath = $target_path
-    $shortcut.Arguments = $arguments
-    $shortcut.Description ="Shortcut to $target_path"
-    $shortcut.Save()
+    if(!(test-path $link_path) -and !(test-path $target_path)) {
+      $WshShell = New-Object -ComObject WScript.Shell
+      $shortcut = $WshShell.CreateShortcut( $link_path )
+      $shortcut.TargetPath = $target_path
+      $shortcut.Arguments = $arguments
+      $shortcut.Description ="Shortcut to $target_path"
+      $shortcut.Save()
+    }
   }
 }
 
