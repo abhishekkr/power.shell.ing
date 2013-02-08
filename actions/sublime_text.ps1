@@ -40,7 +40,7 @@ function SublimeText {
    )
 
   begin {
-    echo "Downloading and Installing MSysGit..."
+    echo "Downloading and Installing Sublime Text..."
   }
 
   process {
