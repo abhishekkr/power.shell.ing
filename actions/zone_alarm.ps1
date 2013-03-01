@@ -42,6 +42,7 @@ function ZoneAlarm {
       $zonealarm_file = "$($download_dir)\ZoneAlarmFreeFirewall2012.exe"
       Download-URL $zonealarm_url $zonealarm_file
 
+      EXe-Install $zonealarm_file "/S /runwgacheck"
       BANNER "Install ZONE ALARM yourself in CUSTOM mode."
     } else {
       BANNER "Unlocker is already installed."
