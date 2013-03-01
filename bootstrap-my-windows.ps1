@@ -38,6 +38,28 @@ New-Item -name $app_dir_name -type directory -Force
 
 MSysGit $download_dir $home_dir
 SublimeText $download_dir $home_dir $app_dir
-
+TestDisk $download_dir $home_dir $app_dir
+Python273 $download_dir $home_dir
+MSSEC $download_dir $home_dir
+ZoneAlarm $download_dir $home_dir
+GoogleChrome $download_dir $home_dir
+Firefox $download_dir $home_dir
+JDK7u11 $download_dir
+OpenOffice $download_dir
+Putty $download_dir
+Sandboxie $download_dir
+VirtualBox $download_dir
+ImgBurn $download_dir
+FreeDownloadManager $download_dir
+Pidgin $download_dir
+Skype $download_dir
+SpytBotSND $download_dir
+FoxitReader $download_dir
+VLC $download_dir
+uTorrent $download_dir
+UnLocker $download_dir
+7zip $download_dir
+Ruby193p362 $download_dir
+SteamClient $download_dir
 ###############################################################################
 #
