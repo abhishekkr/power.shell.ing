@@ -1,4 +1,4 @@
-#!powershell -executionpolicy unrestricted -file
+#!powershell -executionpolicy Bypass -file
 ###############################################################################
 # Defaults
 
@@ -58,7 +58,7 @@ FoxitReader $download_dir
 VLC $download_dir
 uTorrent $download_dir
 UnLocker $download_dir
-7zip $download_dir
+zip7zip $download_dir
 Ruby193p362 $download_dir
 SteamClient $download_dir
 ###############################################################################

@@ -1,4 +1,4 @@
-# 7zip
+# zip7zip
 ###############################################################################
 # Loading all shared PowerShell scripts
 
@@ -14,7 +14,7 @@ foreach ($shared_lib in $shared_libs) {
 
 ############################################################################### ~
 
-function 7zip {
+function zip7zip {
   param (
     [Parameter(Position=0,
     Mandatory=$true,
@@ -29,13 +29,13 @@ function 7zip {
   }
 
   process {
-    $7zip_bin = "C:\Program Files\7-Zip\7zFM.exe"
-    if(!(test-path $7zip_bin)){
-      $7zip_url = "http://sourceforge.net/projects/sevenzip/files/7-Zip/9.22/7z922-x64.msi/download"
-      $7zip_file  = $download_dir + "\" + "7z922-x64.msi"
-      Download-URL $7zip_url $7zip_file
+    $zip7zip_bin = "C:\Program Files\7-Zip\7zFM.exe"
+    if(!(test-path $zip7zip_bin)){
+      $zip7zip_url = "http://sourceforge.net/projects/sevenzip/files/7-Zip/9.22/7z922-x64.msi/download"
+      $zip7zip_file  = $download_dir + "\" + "7z922-x64.msi"
+      Download-URL $zip7zip_url $zip7zip_file
 
-      MSI-Install $7zip_file
+      MSI-Install $zip7zip_file
       BANNER "7zip has been installed successfully. You need to backup/install required games yourself."
     } else {
       BANNER "7zip is already installed."
