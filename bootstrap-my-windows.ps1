@@ -61,5 +61,6 @@ UnLocker $download_dir
 zip7zip $download_dir
 Ruby193p362 $download_dir
 SteamClient $download_dir
+DDL-MSI-Install 'http://citylan.dl.sourceforge.net/project/hjt/2.0.4/HiJackThis.msi' "$($download_dir)\HiJackThis.msi" 'C:\Program Files\HijackThis'
 ###############################################################################
 #
